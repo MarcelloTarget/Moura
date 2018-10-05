@@ -97,10 +97,10 @@ public class CadastroUsúario extends BasePage {
 		Thread.sleep(1000);
 		escreveTexto(By.cssSelector(".select2-search__field"),"São Paulo");
 		Thread.sleep(1000);
-		
-		WebElement Formapg = getDriver().findElement(By.id("select2-estado-results"));
-		Select comboforma = new Select(Formapg);
-		comboforma.selectByValue("56");
+		clicarBotaoBy(By.cssSelector(".select2-results"));
+		//WebElement Formapg = getDriver().findElement(By.cssSelector(".select2-results__options"));
+		//Select comboforma = new Select(Formapg);
+		//comboforma.selectByValue("56");
 		
 	}
 	
@@ -119,7 +119,7 @@ public class CadastroUsúario extends BasePage {
 		Thread.sleep(3000);
 		clicarBotaoBy(By.id("celular"));
 		Thread.sleep(1000);
-		escreveTexto(By.id("celular"), Geratelefone());
+		escreveTexto(By.id("celular"), GerarCelularAleatorio());
 		Thread.sleep(1000);
 		
 	}

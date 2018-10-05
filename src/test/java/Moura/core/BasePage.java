@@ -411,7 +411,7 @@ public class BasePage {
 	public String GeraCEP() {
 		String[] Cep = { "18115760", "69099208", "60868717", "93544260", "29046552", "58401186",
 				"74948060", "09894330", "13475294", "23510540", "77825100", "64090685", "68904395",
-				"49008051", "18000560", "79005100", "88132013", "49042020" };
+				"49008051", "79005100", "88132013", "49042020" };
 		StringBuilder CepAleatorio = new StringBuilder();
 		CepAleatorio.append(Cep[new Random().nextInt(26)]).append(" ");
 				
@@ -428,8 +428,20 @@ public class BasePage {
 		return telefoneAleatorio.toString();
 	}
 	
+	public String GerarCelularAleatorio() {
+		
+	String[] celular= {"15997733088", "15988000556", "15991197011", "15988000879", "15988047299", "15997818169", "15998433033",
+						"15974055556","15996577402"};
+	StringBuilder celularAleatorio = new StringBuilder();
+	celularAleatorio.append(celular[new Random().nextInt(10)]).append(" ");
+	
+	return celularAleatorio.toString();
+	}
+		
+		
+	}
 	
 
-}
+
 
 

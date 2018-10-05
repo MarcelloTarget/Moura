@@ -14,6 +14,7 @@ import org.openqa.selenium.TakesScreenshot;
 import Moura.core.BaseLoginPage;
 import static Moura.core.DriverFactory.getDriver;
 //import static qa.cnabox.core.DriverFactory.killDriver;
+import static Moura.core.DriverFactory.getDriver;
 
 
 
@@ -32,5 +33,17 @@ public class LoginBaseTest {
 		
 		
 	}
+	@After
+	public void finaliza() throws IOException 
+	{
+		TakesScreenshot ss = (TakesScreenshot) getDriver();
+		File print = ss.getScreenshotAs(OutputType.FILE);
+
+		FileUtils.copyFile(print, new File("target" + File.separator + "screenshot" + File.separator
+				+ testName.getMethodName() +  ".jpg"));
+
+		
+		}
+	
 	
 }

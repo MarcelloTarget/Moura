@@ -69,7 +69,10 @@ public class CadastroUsúario extends BasePage {
 		Thread.sleep(1000);
 	}
 	
-	public void Numero
+	public void Numero () throws InterruptedException {
+		
+		
+	}
 	
 	
 	

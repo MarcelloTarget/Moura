@@ -1,8 +1,9 @@
-package tests.CadastroUsuario;
+package tests.CadastroBalconista;
 
 import Moura.core.LoginBaseTest;
+import Page.Moura.CadastroBalconista.CadastroUsúario;
+
 import org.junit.Test;
-import Page.Moura.CadastroUsúario.CadastroUsúario;
 
 
 

@@ -1,4 +1,4 @@
-package Page.Moura.CadastroUsúario;
+package Page.Moura.CadastroBalconista;
 
 import static Moura.core.DriverFactory.getDriver;
 

@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.Select;
 import Moura.core.BasePage;
 
 
-public class CadastroUsúario extends BasePage {
+public class CadastroBalconistaPage extends BasePage {
 	
 	public void ClicarCadastrese () throws InterruptedException {
 		

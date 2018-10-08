@@ -1,16 +1,17 @@
 package tests.CadastroBalconista;
 
 import Moura.core.LoginBaseTest;
-import Page.Moura.CadastroBalconista.CadastroUsúario;
+import Page.Moura.CadastroBalconista.CadastroBalconistaPage;
+
 
 import org.junit.Test;
 
 
 
 
-public class CadastroUsuario extends LoginBaseTest {
+public class CadastroBalconista extends LoginBaseTest {
 	
-	CadastroUsúario page = new CadastroUsúario();
+	CadastroBalconistaPage page = new CadastroBalconistaPage();
 	
 	@Test
 	

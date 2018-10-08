@@ -17,7 +17,7 @@ public class AprovacaoBalcaoTests extends LoginDistribuidorTeste{
 
 		page.InformeCNPJ();
 		page.informeSenha();
-		
+		page.ClicarEnviar();
 		
 		
 }

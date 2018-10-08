@@ -18,16 +18,17 @@ public class AprovacaoBalcao extends BasePage {
 		Thread.sleep(3000);
 		clicarBotaoBy(By.cssSelector("[accept-charset] .form-group:nth-child(2) .ng-untouched"));
 		Thread.sleep(3000);
-		
 		escreveTexto(By.cssSelector("[accept-charset] .form-group:nth-child(2) .ng-untouched"), "46210258000113");
 		
 	}
 	
 	public void informeSenha() throws InterruptedException{
 		
-		WebDriverWait wait2 = new WebDriverWait(getDriver(), 20);
-		wait2.until(ExpectedConditions.visibilityOfElementLocated(By.className("senha"))).sendKeys("000113");
-		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(3000);
+		clicarBotaoBy(By.className("senha"));
+		Thread.sleep(3000);
+		escreveTexto(By.className("senha"),"000113");
+		Thread.sleep(3000);
 		
 	}
 	

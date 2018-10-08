@@ -3,7 +3,7 @@ package Moura.Logins;
 import Moura.core.BasePage;
 import static Moura.core.DriverFactory.getDriver;
 
-public class LoginDitribuidor extends BasePage  {
+public class LoginDistribuidor extends BasePage  {
 
 
 

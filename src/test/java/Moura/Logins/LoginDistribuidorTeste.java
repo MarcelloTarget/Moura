@@ -2,6 +2,7 @@ package Moura.Logins;
 
 import java.io.File;
 import java.io.IOException;
+import Moura.Logins.LoginDistribuidor;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
@@ -9,19 +10,15 @@ import org.junit.Rule;
 import org.junit.rules.TestName;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import Moura.Logins.LoginBalcao;
 import static Moura.core.DriverFactory.getDriver;
 //import static qa.cnabox.core.DriverFactory.killDriver;
 
-
-
-
-public class LoginBalcaoTeste {
+public class LoginDistribuidorTeste {
 
 	@Rule
 	public TestName testName = new TestName();
 
-	private LoginBalcao page = new LoginBalcao();
+	private LoginDistribuidor page = new LoginDistribuidor();
 
 	@Before
 	public void inicializa() throws InterruptedException {
@@ -45,6 +42,4 @@ public class LoginBalcaoTeste {
 	
 	
 }
-
-
 

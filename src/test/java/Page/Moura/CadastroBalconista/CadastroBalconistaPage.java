@@ -31,11 +31,11 @@ public class CadastroBalconistaPage extends BasePage {
 		
 		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		clicarBotaoBy(By.id("cnpj"));
-		Thread.sleep(1000);
+		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		escreveTexto(By.id("cnpj"), CNPJ);
-		Thread.sleep(1000);
+		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		clicarBotaoBy(By.cssSelector("#buscar-cnpj"));
-		Thread.sleep(1000);
+		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	
@@ -73,14 +73,14 @@ public class CadastroBalconistaPage extends BasePage {
 		getDriver().close();
 		Thread.sleep(6000);
 
-		////// Aqui ele vai retornar para a pagina do BOX////
+		////// Aqui ele vai retornar para a pagina ////
 
 		for (String EnergiaPremiadaMoura : getDriver().getWindowHandles()) {
 			getDriver().switchTo().window(EnergiaPremiadaMoura);
 		}
 		Thread.sleep(2000);
 		getDriver().findElement(By.id("cpf")).click();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
 		//// aqui ele vai escrever a variavel armazenada anteriormente///
 		getDriver().findElement(By.id("cpf")).sendKeys(Textocampo);
@@ -94,11 +94,11 @@ public class CadastroBalconistaPage extends BasePage {
 	
 	public void nomecompleto () throws InterruptedException {
 		
-		Thread.sleep(3000);
+		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		clicarBotaoBy(By.id("nome"));
-		Thread.sleep(1000);
+		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		escreveTexto(By.id("nome"), geraNomeAleatorio());
-		Thread.sleep(1000);
+		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 	}
 		
@@ -106,30 +106,30 @@ public class CadastroBalconistaPage extends BasePage {
 		
 		Thread.sleep(3000);
 		clicarBotaoBy(By.id("email"));
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		escreveTexto(By.id("email"), GeraEmailAleatorio());
-		Thread.sleep(1000);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
 	
 	public void CEP() throws InterruptedException {
 		
 		//Thread.sleep(3000);
-		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		clicarBotaoBy(By.id("cep"));
 		//Thread.sleep(2000);
-		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		escreveTexto(By.id("cep"), GeraCEP());
-		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		escreveTexto(By.id("cep"), "18115760");
+		Thread.sleep(2000);
 	}
 	
 	public void Numero () throws InterruptedException {
 		
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		clicarBotaoBy(By.id("numero"));
-		Thread.sleep(1000);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		escreveTexto(By.id("numero"),"914");
-		Thread.sleep(1000);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 	}
 	
@@ -151,60 +151,60 @@ public class CadastroBalconistaPage extends BasePage {
 	
 	public void Telefone () throws InterruptedException {
 		
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		clicarBotaoBy(By.id("telefone"));
-		Thread.sleep(2000);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		escreveTexto(By.id("telefone"), Geratelefone());
-		Thread.sleep(2000);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
 	
 	public void celular() throws InterruptedException {
 		
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		clicarBotaoBy(By.id("celular"));
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		escreveTexto(By.id("celular"), GerarCelularAleatorio());
-		Thread.sleep(1000);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 	}
 	
 	public void sexo() throws InterruptedException {
 		
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		clicarBotaoBy(By.id("sexo"));
 		Thread.sleep(2000);
 		WebElement Formapg = getDriver().findElement(By.id("sexo"));
 		Select comboforma = new Select(Formapg);
 		comboforma.selectByValue("N");
-		Thread.sleep(1000);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 	}
 	
 	public void Data () throws InterruptedException {
 		
-		Thread.sleep(3000);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		clicarBotaoBy(By.id("dataNascimento"));
-		Thread.sleep(2000);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		escreveTexto(By.id("dataNascimento"), "09101993");
-		Thread.sleep(2000);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
 	public void senha() throws InterruptedException {
 		
-		Thread.sleep(3000);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		clicarBotaoBy(By.id("senha"));
-		Thread.sleep(2000);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		escreveTexto(By.id("senha"), "123456");
-		Thread.sleep(2000);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 	}
 	
 	public void SelecionarCargo() throws InterruptedException {
 		
-		Thread.sleep(3000);
-		clicarBotaoBy(By.cssSelector(".radio .radio-inline:nth-of-type(2) .cadastro_cargo"));
 		Thread.sleep(2000);
+		clicarBotaoBy(By.cssSelector(".radio .radio-inline:nth-of-type(2) .cadastro_cargo"));
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 	}
 	
@@ -218,9 +218,9 @@ public class CadastroBalconistaPage extends BasePage {
 	
 	public void Botaoenviar () throws InterruptedException {
 		
-		Thread.sleep(3000);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		clicarBotaoBy(By.cssSelector("#enviar-cadastro-usuario"));
-		Thread.sleep(2000);
+		getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 	}
 	

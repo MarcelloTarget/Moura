@@ -1,5 +1,6 @@
 package tests.CadastroBalconista;
 
+import Moura.Logins.LoginBalcao;
 import Moura.core.LoginBaseTest;
 import Page.Moura.CadastroBalconista.CadastroBalconistaPage;
 
@@ -9,7 +10,7 @@ import org.junit.Test;
 
 
 
-public class CadastroBalconista extends LoginBaseTest {
+public class CadastroBalconista extends LoginBalcao {
 	
 	CadastroBalconistaPage page = new CadastroBalconistaPage();
 	
@@ -18,7 +19,7 @@ public class CadastroBalconista extends LoginBaseTest {
 	public void DeveCadastrarNovousuariobalconista() throws InterruptedException {
 		
 		page.ClicarCadastrese();
-		page.InformeCnpjRevenda("46210258000466");
+		page.InformeCnpjRevenda("46210258000113");
 		page.Informecpf();
 		page.nomecompleto();
 		page.Email();

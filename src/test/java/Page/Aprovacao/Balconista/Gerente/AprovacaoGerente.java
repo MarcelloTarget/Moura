@@ -1,5 +1,12 @@
 package Page.Aprovacao.Balconista.Gerente;
 
-public class AprovacaoGerente {
+import Moura.core.BasePage;
+
+public class AprovacaoGerente extends BasePage {
+	
+	
+	
+	
+	
 
 }

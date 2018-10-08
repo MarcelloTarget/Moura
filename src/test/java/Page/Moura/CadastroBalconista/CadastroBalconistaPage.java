@@ -5,6 +5,7 @@ import static Moura.core.DriverFactory.getDriver;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -28,7 +29,7 @@ public class CadastroBalconistaPage extends BasePage {
 	
 	public void InformeCnpjRevenda(String CNPJ) throws InterruptedException {
 		
-		Thread.sleep(3000);
+		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		clicarBotaoBy(By.id("cnpj"));
 		Thread.sleep(1000);
 		escreveTexto(By.id("cnpj"), CNPJ);
@@ -113,11 +114,13 @@ public class CadastroBalconistaPage extends BasePage {
 	
 	public void CEP() throws InterruptedException {
 		
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
+		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		clicarBotaoBy(By.id("cep"));
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
+		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		escreveTexto(By.id("cep"), GeraCEP());
-		Thread.sleep(2000);
+		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	public void Numero () throws InterruptedException {

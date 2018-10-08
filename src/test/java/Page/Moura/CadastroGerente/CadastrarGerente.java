@@ -116,9 +116,9 @@ public void InformeCnpjRevenda(String CNPJ) throws InterruptedException {
 		
 		Thread.sleep(3000);
 		clicarBotaoBy(By.id("cep"));
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		escreveTexto(By.id("cep"), GeraCEP());
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	}
 	
 	public void Numero () throws InterruptedException {
@@ -217,7 +217,7 @@ public void InformeCnpjRevenda(String CNPJ) throws InterruptedException {
 	public void Botaoenviar () throws InterruptedException {
 		
 		Thread.sleep(3000);
-		clicarBotaoBy(By.cssSelector("#enviar-cadastro-usuario"));
+		clicarBotaoBy(By.id("enviar-cadastro-usuario"));
 		Thread.sleep(2000);
 		
 	}

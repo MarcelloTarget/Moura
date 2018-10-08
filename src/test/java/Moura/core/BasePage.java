@@ -166,14 +166,14 @@ public class BasePage {
 	 */
 	public String GeraEmailAleatorio() {
 		
-		String[] nomes = { "Antonio", "Rafael", "Bruno", "Marcelo", "Alberto", "Pedro", "Anderson", "Airton", "Sidney",
-				"Wilson", "Carlos", "Candido", "Hugo", "Joao", "Mauro", "Leonardo", "Natanael", "Reinaldo", "Orlando",
-				"Tiago", "Gildo", "Alfredo", "Mauricio", "Jurandir", "Paulo", "Juvencio", "Daniel", "Jair", "Juvenal",
-				"Jorge", "Agiliza", "Alessandro", "Alexandre", "Aline", "Ana Paula", "Andressa", "Antonia", "Camila",
-				"Carolina", "Cileia", "Debora", "Edna", "Ellen", "Eveline", "Fabio", "Fernanda", "Gesiele", "Hellen",
-				"Isabela", "Joice", "Joseense","Beatriz", "Laura", "Maria Luiza", "Júlia","Ana", "Alice", "Sofia", "Maria Eduarda", "Larissa", 
-				"Mariana", "Isabela", "Camila", "Valentina", "Lara", "Letícia", "Miguel", "lucas", "Guilherme" ,"Gabriel", "Enzo", "Arthur", "Rafael", "João", "Gustavo", "Pedro", 
-				"Matheus", "Bernardo", "Davi", "Henrique", "Heitor" };
+		String[] nomes = { "antonio", "rafael", "bruno", "marcelo", "alberto", "pedro", "anderson", "airton", "sidney",
+				"wilson", "carlos", "candido", "hugo", "joao", "mauro", "leonardo", "natanael", "reinaldo", "orlando",
+				"tiago", "gildo", "alfredo", "mauricio", "jurandir", "paulo", "juvencio", "daniel", "Jair", "Juvenal",
+				"jorge", "agiliza", "alessandro", "alexandre", "aline", "ana paula", "andressa", "antonia", "camila",
+				"carolina", "cileia", "debora", "edna", "ellen", "eveline", "fabio", "fernanda", "gesiele", "hellen",
+				"isabela", "joice", "joseense","beatriz", "laura", "maria Luiza", "julia","ana", "alice", "sofia", "mariaeduarda", "larissa", 
+				"mariana", "isabela", "Camila", "valentina", "lara", "leticia", "miguel", "lucas", "guilherme" ,"gabriel", "enzo", "arthur", "rafael", "joao", "gustavo", "pedro", 
+				"matheus", "bernardo", "davi", "henrique", "heitor" };
 		String[] arroba = { "@" };
 		String[] tag = { "Gmail","hotmail","outlook" };
 		String[] complemento = { ".com.br" };

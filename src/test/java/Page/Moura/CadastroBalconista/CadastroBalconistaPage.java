@@ -10,7 +10,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Moura.core.BasePage;
 
@@ -40,12 +42,53 @@ public class CadastroBalconistaPage extends BasePage {
 	public void Informecpf () throws InterruptedException {
 		
 		Thread.sleep(3000);
-		clicarBotaoBy(By.id("cpf"));
-		Thread.sleep(1000);
-		escreveTexto(By.id("cpf"), geracpf(true));
-		Thread.sleep(1000);
 		
+		try {
+			Robot robot = new Robot();
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_T);
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyRelease(KeyEvent.VK_T);
+		} catch (AWTException ex) {
+			throw new WebDriverException("Erro ao digitar CTRL + T", ex);
+
+		}
+		WebDriverWait wait = new WebDriverWait(getDriver(), 5);
+		wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+
+		for (String handle : getDriver().getWindowHandles()) {
+			getDriver().switchTo().window(handle);
+		}
+		Thread.sleep(1000);
+		//// Sempre trocar para a pagina desejada como por exemplo: cpf ou cnpj ///
+		getDriver().navigate().to("https://www.4devs.com.br/gerador_de_cpf");
+		Thread.sleep(2000);
+		getDriver().findElement(By.cssSelector("[type='button']")).click();
+		Thread.sleep(2000);
+
+		////// nesse comando o selenium armazena a variavel atribuida no campo
+		////// texto_cpf////
+		String Textocampo = ObterTextoCampoId("texto_cpf");
+		Thread.sleep(2000);
+		getDriver().close();
+		Thread.sleep(6000);
+
+		////// Aqui ele vai retornar para a pagina do BOX////
+
+		for (String EnergiaPremiadaMoura : getDriver().getWindowHandles()) {
+			getDriver().switchTo().window(EnergiaPremiadaMoura);
+		}
+		Thread.sleep(2000);
+		getDriver().findElement(By.id("cpf")).click();
+		Thread.sleep(3000);
+
+		//// aqui ele vai escrever a variavel armazenada anteriormente///
+		getDriver().findElement(By.id("cpf")).sendKeys(Textocampo);
+
 	}
+	
+
+	
 		
 	
 	
@@ -73,9 +116,9 @@ public class CadastroBalconistaPage extends BasePage {
 		
 		Thread.sleep(3000);
 		clicarBotaoBy(By.id("cep"));
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		escreveTexto(By.id("cep"), GeraCEP());
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	}
 	
 	public void Numero () throws InterruptedException {
@@ -108,9 +151,9 @@ public class CadastroBalconistaPage extends BasePage {
 		
 		Thread.sleep(3000);
 		clicarBotaoBy(By.id("telefone"));
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		escreveTexto(By.id("telefone"), Geratelefone());
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	}
 	
 	

@@ -7,7 +7,7 @@ public class BaseLoginPage extends BasePage  {
 
 
 	public void acessarTelaInicial() {
-		getDriver().get("http://177.68.220.125:9020/#/portal/home");
+		getDriver().get("http://201.68.172.120:9020");
 	}
 
 	public void SetEmail(String email) {

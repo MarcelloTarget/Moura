@@ -1,14 +1,13 @@
 package tests.CadastroGerente;
-import Moura.core.LoginBaseTest;
+
+
+
+import Moura.Logins.LoginBalcao;
 import Page.Moura.CadastroGerente.CadastrarGerente;
-
-
 import org.junit.Test;
 
 
-
-
-public class CadastroGerenteTest extends LoginBaseTest {
+public class CadastroGerenteTest extends LoginBalcao {
 	
 	CadastrarGerente page = new CadastrarGerente();
 	

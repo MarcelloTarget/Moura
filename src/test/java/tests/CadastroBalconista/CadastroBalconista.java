@@ -1,7 +1,7 @@
 package tests.CadastroBalconista;
 
 import Moura.Logins.LoginBalcao;
-import Moura.core.LoginBaseTest;
+
 import Page.Moura.CadastroBalconista.CadastroBalconistaPage;
 
 

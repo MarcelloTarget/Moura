@@ -21,9 +21,8 @@ public class CadastroBalconistaPage extends BasePage {
 	
 	public void ClicarCadastrese () throws InterruptedException {
 		
-		Thread.sleep(3000);
-		clicarBotaoBy(By.cssSelector(".btn-cadastrarse .btn-moura"));
-		Thread.sleep(1000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".btn-cadastrarse .btn-moura"))).click();
 		
 	}
 	

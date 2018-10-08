@@ -1,6 +1,6 @@
 package tests.CadastroBalconista;
 
-import Moura.Logins.LoginBalcao;
+import Moura.Logins.LoginBalcaoTeste;
 
 import Page.Moura.CadastroBalconista.CadastroBalconistaPage;
 
@@ -10,7 +10,7 @@ import org.junit.Test;
 
 
 
-public class CadastroBalconista extends LoginBalcao {
+public class CadastroBalconista extends LoginBalcaoTeste {
 	
 	CadastroBalconistaPage page = new CadastroBalconistaPage();
 	
